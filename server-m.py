@@ -2,8 +2,8 @@ import sys, socket
 import MySQLdb
 from threading import Thread
 
-host="192.168.225.129"
-port=12355
+host="192.168.225.154"
+port=12310
 s=socket.socket()
 s.bind((host,port))
 s.listen(5)
@@ -22,7 +22,7 @@ while True:
 		db.commit()
 		print "Database Updated of Data from Client: ",a
 	except:
-		db.rollback()
+#		db.rollback()
 		print "Database Failed to be Updated of Data from Client: ",a
 
 s.close()

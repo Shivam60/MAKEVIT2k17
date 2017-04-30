@@ -44,14 +44,22 @@ public class login extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jLabel1.setFont(new java.awt.Font("Liberation Serif", 1, 36)); // NOI18N
         jLabel1.setText("Login Form");
 
         jPanel1.setBorder(new javax.swing.border.MatteBorder(null));
 
+        jTextField1.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
+
+        jLabel2.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jLabel2.setText("Username");
 
+        jLabel3.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jLabel3.setText("Password");
 
+        jTextField2.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
+
+        jButton1.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jButton1.setText("Log In");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -94,6 +102,7 @@ public class login extends javax.swing.JFrame {
                 .addContainerGap(40, Short.MAX_VALUE))
         );
 
+        jButton2.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jButton2.setText("Exit");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -131,6 +140,7 @@ public class login extends javax.swing.JFrame {
         String nm=jTextField1.getText();
         String pass=jTextField2.getText();
         String cmd="Select * from hack_user where name='"+nm+"' and pass='"+pass+"';";
+        System.out.println(cmd);
         boolean ans=dbcheck(cmd);        
         if(ans){
             main m=new main();
